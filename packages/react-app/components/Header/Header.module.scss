@@ -1,0 +1,93 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 3.2rem;
+
+  h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--neutral-0);
+
+    span {
+      color: var(--primary-100);
+    }
+  }
+
+  nav {
+    width: 50%;
+    // background-color: red;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+
+      li {
+        font-size: 1.5rem;
+        color: var(--neutral-0);
+
+        a {
+
+
+          &,
+          &:after,
+          &:before {
+            transition: all 0.5s;
+          }
+        }
+
+        button {
+          font-size: 1.5rem;
+          background-color: var(--primary-300);
+          border-radius: 2rem;
+          border: none;
+          padding: 0.8rem 2.5rem;
+          color: var(--neutral-0);
+          transition: 300ms;
+
+          &:hover {
+            scale: 1.05;
+          }
+        }
+      }
+    }
+  }
+}
+
+.stroke {
+    a {
+      position: relative;
+  
+      &:after {
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        margin: auto;
+        width: 0%;
+        content: ".";
+        color: transparent;
+        background: var(--primary-100);
+        height: 2px;
+      }
+  
+      &:hover:after {
+        width: 100%;
+      }
+    }
+  }
+
+  .active {
+      position: relative;
+  
+      &:after {
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 100%;
+        content: ".";
+        color: transparent;
+        background: var(--primary-100);
+        height: 2px;
+      }
+  
+    }
