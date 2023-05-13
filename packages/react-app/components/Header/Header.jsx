@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { Web3Auth } from "@web3auth/web3auth";
 import { CHAIN_NAMESPACES } from "@web3auth/base";
+
+import { SiOpenbadges } from "react-icons/si";
+import { BiLogOut } from "react-icons/bi";
 
 import RPC from "@/web3RPC";
 
@@ -18,6 +21,9 @@ const Header = (props) => {
   const [balance, setBalance] = useState("");
   const [chainId, setChainId] = useState("");
   const [userData, setUserData] = useState({});
+  const [isDropdownlOpen, setIsDropdownlOpen] = useState(false);
+
+  const menuRef = useRef();
 
   const router = useRouter();
 
@@ -28,8 +34,8 @@ const Header = (props) => {
           clientId,
           chainConfig: {
             chainNamespace: CHAIN_NAMESPACES.EIP155,
-            chainId: "0xa4ec",
-            rpcTarget: "https://rpc-mumbai.maticvigil.com/",
+            chainId: "0xaef3", // hex of 42220, Celo Alfajores testnet
+            rpcTarget: "https://alfajores-forno.celo-testnet.org",
           },
         });
 
@@ -50,10 +56,25 @@ const Header = (props) => {
       return;
     }
 
+    let handler = (event) => {
+      if (provider) {
+        if (!menuRef.current.contains(event.target)) {
+          setIsDropdownlOpen(false);
+        }
+      }
+    };
+
+    document.addEventListener("mousedown", handler);
+
+    getUserInfo();
     getChainId();
     getAccounts();
     getBalance();
     getPrivateKey();
+
+    return () => {
+      document.removeEventListener("mousedown", handler);
+    };
   }, [provider]);
 
   const login = async () => {
@@ -98,6 +119,7 @@ const Header = (props) => {
     console.log(chainId);
     setChainId(chainId);
   };
+
   const getAccounts = async () => {
     if (!provider) {
       console.log("provider not initialized yet");
@@ -130,6 +152,10 @@ const Header = (props) => {
     console.log(privateKey);
   };
 
+  const transformedAddress = `${address.substring(0, 4)}...${address.slice(
+    -4
+  )}`;
+
   return (
     <header className={styles.header}>
       <h1>
@@ -137,7 +163,6 @@ const Header = (props) => {
           Ear<span>t</span>h
         </Link>
       </h1>
-      {JSON.stringify(userData)}
       <nav className={styles.stroke}>
         <ul>
           <li className={router.pathname === "/buy" ? styles.active : ""}>
@@ -149,12 +174,46 @@ const Header = (props) => {
           <li className={router.pathname === "/about" ? styles.active : ""}>
             <Link href="/about">About</Link>
           </li>
-          <li>
-            <button onClick={login}>Sign Up</button>
-          </li>
-          <li>
-            <button onClick={getUserInfo}>Sign Up</button>
-          </li>
+          {!provider && (
+            <li>
+              <button onClick={login}>Sign Up</button>
+            </li>
+          )}
+          {provider && (
+            <>
+              <li>
+                <p>{transformedAddress}</p>
+              </li>
+              <li>
+                <div
+                  className={styles.userIcon}
+                  onClick={() => setIsDropdownlOpen((prevState) => !prevState)}
+                >
+                  <img src={`${userData.profileImage}`} alt="profileImage" />
+                </div>
+                <div
+                  className={`${styles.dropdownMenu} ${
+                    isDropdownlOpen ? styles.open : styles.closed
+                  }`}
+                  ref={menuRef}
+                >
+                  <h3>Luiz Alencar</h3>
+                  <ul>
+                    <li className={styles.dropdownItem}>
+                      <SiOpenbadges size={25} fill="black" />
+                      <Link href="#">My Badges</Link>
+                    </li>
+                    <li className={styles.dropdownItem}>
+                      <BiLogOut size={25} fill="black" />
+                      <Link onClick={logout} href="#">
+                        Logout
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </header>
