@@ -168,8 +168,8 @@ const Header = (props) => {
           <li className={router.pathname === "/buy" ? styles.active : ""}>
             <Link href="/buy">Buy Creadits</Link>
           </li>
-          <li className={router.pathname === "/sell" ? styles.active : ""}>
-            <Link href="/sell">Sell Creadits</Link>
+          <li className={router.pathname === "/news" ? styles.active : ""}>
+            <Link href="/news">News</Link>
           </li>
           <li className={router.pathname === "/about" ? styles.active : ""}>
             <Link href="/about">About</Link>
