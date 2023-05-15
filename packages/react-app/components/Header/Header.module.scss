@@ -6,16 +6,6 @@
   width: 100%;
   z-index: 1000;
 
-  h1 {
-    font-size: 4rem;
-    font-weight: 600;
-    color: var(--neutral-0);
-
-    span {
-      color: var(--primary-100);
-    }
-  }
-
   nav {
     // width: 40%;
     font-weight: 600;
@@ -59,6 +49,17 @@
         padding: 0.8rem 2.5rem;
       }
     }
+  }
+}
+
+.logoBx{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 25rem;
+  img{
+    width: 100%;
   }
 }
 

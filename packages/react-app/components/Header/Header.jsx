@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import { Web3Auth } from "@web3auth/web3auth";
 import { CHAIN_NAMESPACES } from "@web3auth/base";
+import toast, { Toaster } from "react-hot-toast";
 
 import { SiOpenbadges } from "react-icons/si";
 import { BiLogOut } from "react-icons/bi";
@@ -128,6 +129,8 @@ const Header = (props) => {
     const rpc = new RPC(provider);
     const address = await rpc.getAccounts();
     setAddress(address);
+
+    localStorage.setItem("address", address);
     console.log(address);
   };
 
@@ -149,22 +152,28 @@ const Header = (props) => {
     }
     const rpc = new RPC(provider);
     const privateKey = await rpc.getPrivateKey();
+    localStorage.setItem("privateKey", privateKey);
     console.log(privateKey);
   };
 
-  const transformedAddress = `${address.substring(0, 4)}...${address.slice(
-    -4
-  )}`;
+  let transformedAddress = "";
+
+  if (address) {
+    transformedAddress = `${address.substring(0, 4)}...${address.slice(-4)}`;
+  }
 
   return (
     <header className={styles.header}>
-      <h1>
+      <div className={styles.logoBx}>
         <Link href="/">
-          Ear<span>t</span>h
+          <img src="/logo.png" alt="logo" />
         </Link>
-      </h1>
+      </div>
       <nav className={styles.stroke}>
         <ul>
+          <li className={router.pathname === "/" ? styles.active : ""}>
+            <Link href="/">Home</Link>
+          </li>
           <li className={router.pathname === "/credits" ? styles.active : ""}>
             <Link href="/credits">Credits</Link>
           </li>
@@ -201,7 +210,17 @@ const Header = (props) => {
                   <ul>
                     <li className={styles.dropdownItem}>
                       <SiOpenbadges size={25} fill="black" />
-                      <Link href="#">My Badges</Link>
+                      <Link
+                        href="#"
+                        onClick={() =>
+                          toast.loading("Feature under development", {
+                            duration: 3000,
+                            position: "top-right",
+                          })
+                        }
+                      >
+                        My Badges
+                      </Link>
                     </li>
                     <li className={styles.dropdownItem}>
                       <BiLogOut size={25} fill="black" />

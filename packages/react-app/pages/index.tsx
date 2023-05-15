@@ -7,6 +7,7 @@ import Forms from "@/components/Forms/Forms";
 import Modal from "@/components/Modal/Modal";
 
 import styles from "@/styles/Home.module.scss";
+import Link from "next/link";
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
@@ -35,7 +36,7 @@ export default function Home() {
                 <button onClick={() => (showModal ? close() : open())}>
                   Carbon footprint
                 </button>
-                <button>Available credits</button>
+                <Link href="/credits">Available credits</Link>
               </div>
             </div>
             <div className={styles.imgContent}>
@@ -64,8 +65,13 @@ export default function Home() {
                   </div>
                   <h2>Transparency</h2>
                   <p>
-                    Tokenization enables tracking and recording carbon credit
-                    transactions in an immutable and transparent manner.
+                    Tokenization leverages the power of blockchain technology to
+                    establish a decentralized network where carbon credit
+                    transactions can be securely recorded, eliminating the need
+                    for intermediaries and reducing administrative complexities.
+                    This not only streamlines the process but also enhances
+                    trust among participants, as the immutable nature of
+                    blockchain ensures the integrity of transaction records.
                   </p>
                 </div>
                 <div className={styles.box}>
@@ -100,11 +106,19 @@ export default function Home() {
                   </div>
                   <h2>Democratization</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    a nulla fermentum est commodo laoreet. Donec rutrum accumsan
-                    dignissim. Nunc varius faucibus dolor ac placerat. Mauris
-                    semper erat quis magna ultricies, egestas consectetur lectus
-                    dignissim.
+                    The democratization of blockchain technology is
+                    revolutionizing various industries by providing
+                    decentralized and transparent systems for secure
+                    transactions. It empowers individuals by enabling direct
+                    control over financial transactions, offering opportunities
+                    for the unbanked and underbanked populations. Beyond
+                    finance, blockchain{"'"}s decentralization enhances supply
+                    chain management, healthcare, voting systems, and
+                    intellectual property. Decentralized applications (DApps)
+                    and smart contracts further enable efficient, secure, and
+                    transparent processes. Overall, the democratization of
+                    blockchain fosters a more inclusive and transparent society,
+                    disrupting traditional systems and empowering individuals.
                   </p>
                 </div>
                 <div className={styles.box}>
@@ -118,23 +132,29 @@ export default function Home() {
                   </div>
                   <h2>Sustainability</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                    a nulla fermentum est commodo laoreet. Donec rutrum accumsan
-                    dignissim. Nunc varius faucibus dolor ac placerat. Mauris
-                    semper erat quis magna ultricies, egestas consectetur lectus
-                    dignissim.
+                    Blockchain technology offers innovative solutions for
+                    sustainability by promoting transparency and accountability.
+                    It enables transparent supply chains, facilitating
+                    responsible production and consumption. In the field of
+                    renewable energy, blockchain enables peer-to-peer energy
+                    trading, supporting the adoption of clean energy.
+                    Blockchain-based systems also enhance carbon credit tracking
+                    and verification, fostering environmental sustainability.
+                    Additionally, blockchain improves transparency and
+                    accountability in charitable donations. Overall, blockchain
+                    contributes to a more sustainable future across industries
+                    and sectors.
                   </p>
                 </div>
               </div>
             </div>
           </section>
         </main>
-        
       </div>
       <AnimatePresence initial={false} mode="wait" onExitComplete={() => null}>
         {showModal && (
           <Modal handleClose={close}>
-            <Forms />  
+            <Forms />
           </Modal>
         )}
       </AnimatePresence>

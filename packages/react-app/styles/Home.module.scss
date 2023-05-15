@@ -55,7 +55,7 @@
   align-items: center;
   gap: 2;
 
-  button {
+  button, a {
     color: var(--neutral-0);
     border: 1px solid var(--primary-100);
     border-radius: 2.5rem;
@@ -142,6 +142,6 @@
 
   p {
     font-size: 1.8rem;
-    text-align: justify;
+    text-align: center;
   }
 }
