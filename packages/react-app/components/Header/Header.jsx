@@ -165,8 +165,8 @@ const Header = (props) => {
       </h1>
       <nav className={styles.stroke}>
         <ul>
-          <li className={router.pathname === "/buy" ? styles.active : ""}>
-            <Link href="/buy">Buy Creadits</Link>
+          <li className={router.pathname === "/credits" ? styles.active : ""}>
+            <Link href="/credits">Credits</Link>
           </li>
           <li className={router.pathname === "/news" ? styles.active : ""}>
             <Link href="/news">News</Link>
