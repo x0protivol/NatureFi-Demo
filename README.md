@@ -1,199 +1,40 @@
-# EarthToken
+# EarthToken - Awareness is the first step towards change.
+EarthToken offers various functionalities to facilitate carbon offsetting and promote sustainability. Users, including both individuals and companies, can utilize the platform to redeem and retire carbon credits, effectively compensating for their carbon footprint. The platform aims to democratize access to web3 technology. Additionally, the platform utilizes calculate users' carbon footprint accurately, providing valuable insights for informed decision-making. Furthermore, the platform allows users to stay informed about the latest developments, regulations, and initiatives in the field. Overall, the platform combines technology, accessibility, and education to empower individuals and businesses in their journey towards sustainability and combating climate change.
 
-<!-- TITLE -->
-<p align="center"> 
-  <img width="100px" src="https://github.com/celo-org/celo-composer/blob/main/images/readme/celo_isotype.svg" align="center" alt="Celo" />
- <h2 align="center">Celo Composer</h2>
- <p align="center">Build, deploy, and iterate quickly on decentralized applications using Celo.</p>
-</p>
-  <p align="center">
-    <a href="https://github.com/celo-org/celo-composer/graphs/stars">
-      <img alt="GitHub Contributors" src="https://img.shields.io/github/stars/celo-org/celo-composer?color=FCFF52" />
-    </a>
-    <a href="https://github.com/celo-org/celo-composer/graphs/contributors">
-      <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/celo-org/celo-composer?color=E7E3D4" />
-    </a>
-    <a href="https://github.com/celo-org/celo-composer/issues">
-      <img alt="Issues" src="https://img.shields.io/github/issues/celo-org/celo-composer?color=E7E3D4" />
-    </a>
-    <a href="https://github.com/celo-org/celo-composer/pulls">
-      <img alt="GitHub pull requests" src="https://img.shields.io/github/issues-pr/celo-org/celo-composer?color=E7E3D4" />
-    </a>
-    <a href="https://opensource.org/license/mit/">
-      <img alt="MIT License" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
-    </a>
-  </p>
-</p>
+![mockup](https://github.com/Alenkassemiro/EarthToken/assets/68920578/9355a87d-964a-4994-887c-c79f74b1a01f)
 
-<!-- TABLE OF CONTENTS -->
+## Solution
 
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
+### 1 - Redeem and Retirement of carbon credits for both companies and individuals:
+Our platform offers a comprehensive solution for companies and individuals who wish to offset their carbon footprint. Through the Redeem and Retirement feature, we facilitate the process of purchasing and redeeming carbon credits. Companies can acquire credits to compensate for their emissions, while individuals also have the opportunity to contribute to a more sustainable future. By being part of our community, you will have access to a wide range of trustworthy carbon offset projects and initiatives, allowing you to make a difference in combating climate change.
 
-<!-- ABOUT THE PROJECT -->
+### 2 - Democratization of access to web3 technology through social media login and automatic wallet creation:
+We aim to make web3 technology accessible to all users, regardless of their previous experience. With the goal of simplifying the onboarding process to our platform, we offer the option of social media login, allowing you to easily connect and start exploring the features immediately. Additionally, we provide automatic wallet creation, eliminating the need for advanced technical knowledge to set up a crypto wallet. By removing these entry barriers, we are empowering more people to participate in the carbon tokenization economy and contribute to a sustainable future.
 
-## About The Project
+### 3 - Calculation of your carbon footprint with artificial intelligence:
+We understand that awareness is the first step towards change. That's why our platform offers an advanced carbon footprint calculation functionality. Using artificial intelligence, we collect relevant information about your lifestyle, consumption habits, and daily activities to provide an accurate estimate of your carbon footprint. With this data, you will gain a clear understanding of the environmental impact of your actions and make informed decisions to reduce your contribution to carbon emissions.
 
-Celo Composer allows you to quickly build, deploy, and iterate on decentralized applications using Celo. It provides a number of frameworks, examples, and Celo specific functionality to help you get started with your next dApp.
+### 4 - News section about the world of carbon credits:
+In our platform, we believe in the importance of education and knowledge sharing. Therefore, we offer a dedicated news section with updated information about the world of carbon credits. In this section, you will find articles, analyses, and relevant insights about the latest trends, regulations, and innovations in this ever-evolving field. Stay informed about the latest developments and be inspired by success stories of sustainability projects worldwide.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## Built With
-
-Celo Composer is built on Celo to make it simple to build dApps using a variety of front-end frameworks, and libraries.
-
-- [Celo](https://celo.org/)
-- [Solidity](https://docs.soliditylang.org/en/v0.8.19/)
-- [Next.js](https://nextjs.org/)
-- [React.js](https://reactjs.org/)
-- [Material UI](https://mui.com/)
-- [React Native](https://reactnative.dev/)
-- [Flutter](https://docs.flutter.dev/)
-- [React-celo](https://github.com/celo-org/react-celo/)
-- [Rainbowkit-celo](https://github.com/celo-org/rainbowkit-celo)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
-
-## Prerequisites
-
-- Node
-- Git (v2.38 or higher)
-
-## How to use Celo Composer
-
-The easiest way to start with Celo Composer is using `@celo/celo-composer`. This CLI tool lets you quickly start building dApps on Celo for multiple frameworks, including React (with either react-celo or rainbowkit-celo), React Native (w/o Expo), Flutter, and Angular. To get started, just run the following command, and follow the steps:
-
-```bash
-npx @celo/celo-composer@latest create
-```
-
-### Front-end framework
-
-![Celo Composer select framework](https://github.com/celo-org/celo-composer/blob/main/images/readme/cc_step_1.png?raw=true)
-
-### Web3 library (for react-app)
-
-![Celo Composer select framework](https://github.com/celo-org/celo-composer/blob/main/images/readme/cc_step_2.png?raw=true)
-
-### Smart contract framework
-
-![Celo Composer tool selection](https://github.com/celo-org/celo-composer/blob/main/images/readme/cc_step_3.png?raw=true)
-
-### Subgraph
-
-![Celo Composer subgraph support](https://github.com/celo-org/celo-composer/blob/main/images/readme/cc_step_4.png?raw=true)
-
-### Name your dApp
-
-![Celo Composer dApp name](https://github.com/celo-org/celo-composer/blob/main/images/readme/cc_step_5.png?raw=true)
-
-**_🔥Voila, you have a dApp ready to go. Voila, you have a dApp ready to go. Start building your dApp on Celo._**
-
-### Getting started
-
-Once your custom dApp has been created, just install dependencies, either with `yarn` or `npm i`, and run the respective script from the `package.json` file.
-## Supported Frameworks
-
-### React
-
-- Support for Website and Progressive Web Application.
-- Works with all major crypto wallets.
-
-Check [package readme](https://github.com/celo-org/celo-composer/blob/main/packages/react-app/README.md) to learn more about.
-
-### React Native
-
-- Out of the box config, just focus on buidl.
-- Support for Android and IOS.
-- Works with and without [Expo](https://expo.dev/).
-- Working example app included.
-
-Check [package readme](https://github.com/celo-org/celo-composer/blob/main/packages/react-native-app/README.md) to learn more about.
-
-### Flutter
-
-- One command to get started - Type `flutter run` to start development in your mobile phone.
-- Works with all major mobile crypto wallets.
-- Support for Android, IOS (Web, Windows, and Linux coming soon).
-- Working example app included.
-
-Check [package readme](https://github.com/celo-org/celo-composer/blob/main/packages/flutter-app/README.md) to learn more about.
-
-### Angular
-
-- Support for Website and Progressive Web Application.
-- Works with all major crypto wallets.
-
-Check [package readme](https://github.com/celo-org/celo-composer/blob/main/packages/angular-app/README.md) to learn more about.
-
-<!-- USAGE EXAMPLES -->
-
-## 🔭 Learning Solidity
-
-📕 Read the docs: <https://docs.soliditylang.org>
-
-- [Primitive Data Types](https://solidity-by-example.org/primitives/)
-- [Mappings](https://solidity-by-example.org/mapping/)
-- [Structs](https://solidity-by-example.org/structs/)
-- [Modifiers](https://solidity-by-example.org/function-modifier/)
-- [Events](https://solidity-by-example.org/events/)
-- [Inheritance](https://solidity-by-example.org/inheritance/)
-- [Payable](https://solidity-by-example.org/payable/)
-- [Fallback](https://solidity-by-example.org/fallback/)
-
-📧 Learn the [Solidity globals and units](https://solidity.readthedocs.io/en/v0.8.19/units-and-global-variables.html)
-
-## Support
-
-Join the Celo Discord server at <https://chat.celo.org>. Reach out on the dedicated repo channel [here](https://discord.com/channels/600834479145353243/941003424298856448).
-
-<!-- ROADMAP -->
-
-## Roadmap
-
-See the [open issues](https://github.com/celo-org/celo-composer/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
-
-## Contributing
-
-We welcome contributions from the community.
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-## License
-
-Distributed under the MIT License. See `LICENSE.txt` for more information.
-
-<!-- CONTACT -->
-## Contact
-
-- [@CeloDevs](https://twitter.com/CeloDevs)
-- [Discord](https://discord.com/invite/celo)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
+## Collaborators 
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/luiz-k-alencar/">
+        <img src="https://media.licdn.com/dms/image/C4E03AQHgst4xVO-NaQ/profile-displayphoto-shrink_200_200/0/1644929873535?e=1689811200&v=beta&t=7tXCsFioYP3VvZPL2KP97QGeOR2BJ76SyPVvmmtUoDk" width="100px;" alt="Luiz Alencar profile image"/><br>
+        <sub>
+          <b>Luiz Felipe Kama Alencar</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://www.linkedin.com/in/bianca-cassemiro/">
+        <img src="https://media.licdn.com/dms/image/C4D03AQHPOgWb0GUULw/profile-displayphoto-shrink_200_200/0/1663081067374?e=1689811200&v=beta&t=S0oCr7swAjWaNvQl6YTTcvxQ5wuk9ArMf44wOMoJHNc" width="100px;" alt="Bianca Cassemiro profile image"/><br>
+        <sub>
+          <b>Bianca Cassemiro Lima</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
