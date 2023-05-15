@@ -9,7 +9,7 @@ export type Token = {
   symbol: string;
 };
 
-const TokenCard: FC<{ token: Token }> = (props) => {
+const TokenCard: FC<{ token: Token,redeemPoolToken:()=>{} }> = (props) => {
   const { name, date, symbol, projectId } = props.token;
 
   return (
@@ -25,7 +25,7 @@ const TokenCard: FC<{ token: Token }> = (props) => {
           </div>
           <div className={styles.redeemButton}>
             <p>{symbol}</p>
-            <button>Redeem Token</button>
+            <button onClick={props.redeemPoolToken}>Redeem Token</button>
           </div>
         </div>
       </div>
