@@ -24,6 +24,7 @@
         "react-icons": "^4.8.0",
         "react-loader-spinner": "^5.3.4",
         "sass": "^1.62.1",
+        "toucan-sdk": "^1.0.4-beta",
         "wagmi": "^0.12.2"
     },
     "devDependencies": {
