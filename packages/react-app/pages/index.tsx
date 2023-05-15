@@ -29,8 +29,9 @@ export default function Home() {
                 <span>matter</span>.
               </h1>
               <p>
-                Buy and sell carbon credits to combat <br />
-                climate change and preserve our planet
+                Awareness is the first step towards change. <br />
+                Your Carbon Journey Starts Here: Tokenization for <br />
+                Sustainable Living and Corporate Responsibility.
               </p>
               <div className={styles.actions}>
                 <button onClick={() => (showModal ? close() : open())}>
