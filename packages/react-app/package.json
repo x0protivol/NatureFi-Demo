@@ -25,7 +25,9 @@
         "react-loader-spinner": "^5.3.4",
         "sass": "^1.62.1",
         "toucan-sdk": "^1.0.4-beta",
-        "wagmi": "^0.12.2"
+        "wagmi": "^0.12.2",
+        "react-hot-toast": "^2.4.1"
+        
     },
     "devDependencies": {
         "@types/node": "18.15.2",
