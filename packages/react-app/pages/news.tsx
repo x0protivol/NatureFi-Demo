@@ -14,7 +14,7 @@ const News = () => {
     const fetchData = async () => {
       setLoading(true);
       const res = await fetch(
-        "https://newsapi.org/v2/everything?q=carbon%credit&sortBy=publishedAt&apiKey=ba4da4286d754c11942f06d609b7f4db"
+        "https://gnews.io/api/v4/search?q=carbon%20credit&apikey=fa8c3c776765798045a98efa6412c8aa"
       );
       const data = await res.json();
 
@@ -51,7 +51,7 @@ const News = () => {
               return (
                 <NewsCard
                   article={article}
-                  key={article.source.id + article.title}
+                  key={article.source.name + article.title}
                 />
               );
             })}
